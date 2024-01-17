@@ -37,11 +37,12 @@ exports.getSingleContactsById = async (req, res) => {
 
 // create new contact form req body
 exports.createContacts = (req, res) => {
-  let { name, email, phone } = req.body;
+  let { name, email, phone, createdAt } = req.body;
   let contact = new Contact({
     name,
     email,
     phone,
+    createdAt,
   });
   contact.save();
   console.log(contact);

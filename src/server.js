@@ -22,7 +22,7 @@ mongoose
   .then(() => {
     app.use(contactRoute);
     app.listen(port, () => {
-      console.log("Connected to the database ok");
+      console.log("database connection successful");
       console.log(`Server is running on port ${port}`);
     });
   })
